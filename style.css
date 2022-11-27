@@ -28,8 +28,8 @@ body {
 }
 
 .container {
-  width: 960px;
-  margin: 0 auto;
+	width: 90vw;
+	margin: auto;
 }
 
 header,
@@ -49,6 +49,20 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 80px;
+}
+
+@media (max-width: 1000px) {
+  .grid-3-cols {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 64px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-3-cols {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
 }
 
 .btn:link,
@@ -86,11 +100,18 @@ img {
 /* ------------------------ */
 
 /* HEADER */
-header {
+.main-header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 80px;
   margin-top: 64px;
+}
+
+@media (max-width: 900px) {
+  .main-header { 
+    grid-template-columns: 1fr;
+    gap:64px;
+  }
 }
 
 .header-text-box {
